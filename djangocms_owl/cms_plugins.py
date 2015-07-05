@@ -32,11 +32,6 @@ class OwlCarouselPlugin(CMSPluginBase):
                 'stop_on_hover',
             ),
         }),
-        (_('Style'), {
-            'fields': (
-                'style',
-            ),
-        }),
     )
 
 
