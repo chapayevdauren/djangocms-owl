@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="{{ STATIC_URL }}djangocms_owl/owl.theme.css">
 {% endaddtoblock %}
 
-<div class="owl-carousel-plugin plugin" id="plugin-{{ instance.pk }}">
+<div class="owl-carousel-plugin plugin{% if style %} {{ style }}{% endif %}" id="plugin-{{ instance.pk }}">
   <div class="row">
     <div class="small-12 columns">
       <div class="slider">

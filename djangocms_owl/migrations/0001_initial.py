@@ -7,7 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('cms', '0013_auto_20150704_1500'),
+        ('cms', '0012_auto_20150607_2207'),
     ]
 
     operations = [
@@ -21,7 +21,9 @@ class Migration(migrations.Migration):
                 ('autoplay', models.BooleanField(default=False, help_text='Slides cycle automatically every 5 seconds')),
                 ('stop_on_hover', models.BooleanField(default=False, help_text='Stop autoplay on mouse hover')),
                 ('items', models.PositiveSmallIntegerField(default=1, help_text='maximum amount of items displayed at a time')),
-                ('auto_height', models.BooleanField(default=False, help_text='Add height to owl-wrapper-outer so you can use diffrent heights on slides.')),
+                ('auto_height', models.BooleanField(default=False, help_text='Add height to owl-wrapper-outer so you can use different heights on slides.')),
+                ('style', models.CharField(default=b'default', help_text='CSS class', max_length=255, verbose_name='style', choices=[(b'default', b'Default')])),
+                ('template', models.CharField(default=b'default', max_length=255, verbose_name='template', choices=[(b'default', b'Default')])),
             ],
             options={
                 'abstract': False,

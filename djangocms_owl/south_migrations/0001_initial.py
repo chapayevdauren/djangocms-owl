@@ -18,6 +18,8 @@ class Migration(SchemaMigration):
             ('stop_on_hover', self.gf('django.db.models.fields.BooleanField')(default=False)),
             ('items', self.gf('django.db.models.fields.PositiveSmallIntegerField')(default=1)),
             ('auto_height', self.gf('django.db.models.fields.BooleanField')(default=False)),
+            ('style', self.gf('django.db.models.fields.CharField')(default='style1', max_length=255)),
+            ('template', self.gf('django.db.models.fields.CharField')(default='template1', max_length=255)),
         ))
         db.send_create_signal(u'djangocms_owl', ['OwlCarousel'])
 
@@ -57,7 +59,9 @@ class Migration(SchemaMigration):
             'navigation': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'pagination': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'pagination_numbers': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
-            'stop_on_hover': ('django.db.models.fields.BooleanField', [], {'default': 'False'})
+            'stop_on_hover': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
+            'style': ('django.db.models.fields.CharField', [], {'default': "'style1'", 'max_length': '255'}),
+            'template': ('django.db.models.fields.CharField', [], {'default': "'template1'", 'max_length': '255'})
         }
     }
 
