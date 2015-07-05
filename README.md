@@ -6,7 +6,7 @@
 * Django>=1.6
 
 ## Installation
-Install Djangocms-owl from Pypi  
+Install Djangocms-owl from Pypi.
 ```
 pip install djangocms-owl
 ```
@@ -18,8 +18,16 @@ INSTALLED_APPS = (
     ...
 )
 ```
+Django 1.6 and/or South users will need to add the following to ensure migration compatibility.
+```
+SOUTH_MIGRATION_MODULES = {
+    ...
+    'djangocms_owl': 'djangocms_owl.south_migrations',
+    ...
+}
+```
 
-**Owl Carousel** has a dependency on JQuery [Docs](http://owlcarousel.owlgraphic.com/docs/started-installation.html) that is not currently included within this package. Add a copy will need adding to a template such as the base.html
+**Owl Carousel** has a dependency on JQuery [Docs](http://owlcarousel.owlgraphic.com/docs/started-installation.html) that is not currently included within this package. Add a copy will need adding to a template such as the base.html.
 
 ```html
 <script src="jquery.min.js"></script>
@@ -35,7 +43,8 @@ DJANGOCMS_OWL_STYLES = (
 )
 ```
 
-djangocms_owl/default.html is rendered by default. The user can select custom templates if the following tuple is set as the example below demonstrates. 
+djangocms_owl/default.html is rendered by default. The user can select custom templates if the following tuple is set as the example below demonstrates.
+
 ```python
 DJANGOCMS_OWL_TEMPLATES = (
     ('template1', 'Template 1'),
