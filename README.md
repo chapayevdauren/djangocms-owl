@@ -1,5 +1,5 @@
 # djangocms-owl
-**djangocms-owl** is a plugin for [Djangocms](https://github.com/divio/django-cms) that implements the JavaScript carousel library [Owl Carousel](http://owlgraphic.com/owlcarousel/). Version 1 of Owl Carousel is supported.
+**djangocms-owl** is a reuseable plugin for [django-cms](https://github.com/divio/django-cms) that implements the JavaScript carousel library [Owl Carousel](http://owlgraphic.com/owlcarousel/). Version 1 of Owl Carousel is supported.
 
 ## Dependencies
 * Djangocms>=3.0
@@ -49,3 +49,5 @@ DJANGOCMS_OWL_TEMPLATES = (
 * Add support for owl carousel 2
 * Expand on the included Owl Carousel configuration options
 
+## Inspiration
+* [cmsplugin-filer](https://github.com/stefanfoulis/cmsplugin-filer)
