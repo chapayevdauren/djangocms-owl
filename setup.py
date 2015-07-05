@@ -30,7 +30,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author='Lee Solway',
     author_email='lee@digitalanvil.co.uk',
-    url='https://github.com/leesolway/djangocms-owl',
+    url='https://github.com/digital-anvil/djangocms-owl',
     packages=[
         'djangocms_owl',
     ],

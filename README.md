@@ -60,3 +60,10 @@ DJANGOCMS_OWL_TEMPLATES = (
 
 ## Inspiration
 * [cmsplugin-filer](https://github.com/stefanfoulis/cmsplugin-filer)
+
+
+## Contributions
+* Lee Solway
+
+## History
+* First release on PyPI. 0.1.0 (2015-07-03) *
