@@ -21,13 +21,12 @@ if sys.argv[-1] == 'publish':
     sys.exit()
 
 readme = open('README.md').read()
-history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
     name='djangocms-owl',
     version=version,
     description="""Djangocms plugin for owl carousel v1""",
-    long_description=readme + '\n\n' + history,
+    long_description=readme,
     author='Lee Solway',
     author_email='lee@digitalanvil.co.uk',
     url='https://github.com/digital-anvil/djangocms-owl',
