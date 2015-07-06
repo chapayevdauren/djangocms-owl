@@ -47,6 +47,6 @@ class OwlCarousel(CMSPlugin):
         default=settings.DJANGOCMS_OWL_TEMPLATES[0][0], )
 
     def get_style(self):
-        if self.style and self.style != settings.DEFAULT:
+        if self.style and self.style != settings.DJANGOCMS_OWL_DEFAULT:
             return self.style
         return ''
