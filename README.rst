@@ -103,9 +103,16 @@ Contributions
 
 History
 -------
+**Documentation updates. 0.1.2** WIP
 
--  Documentation updates. 0.1.1 (2015-07-05) \*
--  First release on PyPI. 0.1.0 (2015-07-03) \*
+- Converted README.md to README.rst
+- Added AppConf
+- Added DJANGOCMS_CHILD_CLASSES configuration option
+- Updated the initial Django migration dependency to CMS 0001 initial
+
+**Documentation updates. 0.1.1** (2015-07-05)
+
+**First release on PyPI. 0.1.0** (2015-07-03)
 
 .. _django-cms: https://github.com/divio/django-cms
 .. _Owl Carousel: http://owlgraphic.com/owlcarousel/
