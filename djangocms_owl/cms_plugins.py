@@ -4,6 +4,7 @@ from django.utils.translation import ugettext as _
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 
+from .conf import settings
 from .models import OwlCarousel
 
 
@@ -12,6 +13,7 @@ class OwlCarouselPlugin(CMSPluginBase):
     model = OwlCarousel
     allow_children = True
     render_template = 'djangocms_owl/owl_carousel.html'
+    child_classes = settings.DJANGOCMS_OWL_CHILD_CLASSES
     fieldsets = (
         (None, {
             'fields': (

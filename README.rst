@@ -73,6 +73,16 @@ demonstrates.
         ('template2', 'Template 2'),
     )
 
+
+Restrict the plugins available to Owl Carousel
+
+.. code:: python
+
+    DJANGOCMS_OWL_CHILD_CLASSES = (
+        'PicturePlugin',
+    )
+
+
 Todo
 ----
 

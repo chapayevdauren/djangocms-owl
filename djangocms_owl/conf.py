@@ -9,9 +9,12 @@ from appconf import AppConf
 class OwlConf(AppConf):
     DEFAULT = 'default'
 
+    CHILD_CLASSES = ()
+
     STYLES = (
         (DEFAULT, _('Default')),
     )
+
     TEMPLATES = (
         (DEFAULT, _('Default')),
     )
