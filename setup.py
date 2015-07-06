@@ -20,7 +20,7 @@ if sys.argv[-1] == 'publish':
     print("  git push --tags")
     sys.exit()
 
-readme = open('README.md').read()
+readme = open('README.rst').read()
 
 setup(
     name='djangocms-owl',
