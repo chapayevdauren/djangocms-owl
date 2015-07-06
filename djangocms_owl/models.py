@@ -1,19 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext as _
 
 from cms.models import CMSPlugin
 
-
-DEFAULT_STR = 'default'
-
-DJANGOCMS_OWL_DEFAULT_STYLES = ((DEFAULT_STR, 'Default'), )
-DJANGOCMS_OWL_STYLES = getattr(settings, 'DJANGOCMS_OWL_STYLES', DJANGOCMS_OWL_DEFAULT_STYLES)
-
-DJANGOCMS_OWL_DEFAULT_TEMPLATES = ((DEFAULT_STR, 'Default'), )
-DJANGOCMS_OWL_TEMPLATES = getattr(settings, 'DJANGOCMS_OWL_TEMPLATES', DJANGOCMS_OWL_DEFAULT_TEMPLATES)
+from .conf import settings
 
 
 class OwlCarousel(CMSPlugin):
@@ -45,16 +37,16 @@ class OwlCarousel(CMSPlugin):
     style = models.CharField(
         _('style'),
         max_length=255,
-        choices=DJANGOCMS_OWL_STYLES,
-        default=DJANGOCMS_OWL_STYLES[0][0],
+        choices=settings.DJANGOCMS_OWL_STYLES,
+        default=settings.DJANGOCMS_OWL_STYLES[0][0],
         help_text=_('CSS class'), )
     template = models.CharField(
         _('template'),
         max_length=255,
-        choices=DJANGOCMS_OWL_TEMPLATES,
-        default=DJANGOCMS_OWL_TEMPLATES[0][0], )
+        choices=settings.DJANGOCMS_OWL_TEMPLATES,
+        default=settings.DJANGOCMS_OWL_TEMPLATES[0][0], )
 
     def get_style(self):
-        if self.style and self.style != DEFAULT_STR:
+        if self.style and self.style != settings.DEFAULT:
             return self.style
         return ''
