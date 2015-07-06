@@ -103,7 +103,8 @@ Contributions
 
 History
 -------
-**Documentation updates. 0.1.2** WIP
+**Bug Fix. 0.1.3** (2015-07-06)
+**0.1.2** (2015-07-06)
 
 - Converted README.md to README.rst
 - Added AppConf
