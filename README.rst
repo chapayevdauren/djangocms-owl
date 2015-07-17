@@ -26,7 +26,7 @@ Add Djangocms\_owl to INSTALLED\_APPS
 
     INSTALLED_APPS = (
         ...
-        'djangocms_owl',  
+        'djangocms_owl',
         ...
     )
 
@@ -103,6 +103,8 @@ Contributions
 
 History
 -------
+**Django 1.8 render template bug fix. 0.1.4** (2015-07-17)
+
 **Bug Fix. 0.1.3** (2015-07-06)
 
 **0.1.2** (2015-07-06)
