@@ -19,5 +19,9 @@ class OwlConf(AppConf):
         (DEFAULT, _('Default')),
     )
 
+    INCLUDE_CSS = True
+
+    INCLUDE_JS_OWL = True
+
     class Meta:
         prefix = 'djangocms_owl'

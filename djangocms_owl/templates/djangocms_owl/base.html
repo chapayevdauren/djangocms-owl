@@ -2,7 +2,9 @@
 {% load static %}
 
 {% addtoblock 'js' %}
-  <script src="{% static 'djangocms_owl/owl.carousel.js' %}"></script>
+  {% if INCLUDE_JS_OWL %}
+    <script src="{% static 'djangocms_owl/owl.carousel.js' %}"></script>
+  {% endif %}
 {% endaddtoblock %}
 
 {% addtoblock 'js' %}
@@ -27,8 +29,10 @@
 {% endaddtoblock %}
 
 {% addtoblock 'css' %}
-  <link rel="stylesheet" href="{% static 'djangocms_owl/owl.carousel.css' %}">
-  <link rel="stylesheet" href="{% static 'djangocms_owl/owl.theme.css' %}">
+  {% if INCLUDE_CSS %}
+    <link rel="stylesheet" href="{% static 'djangocms_owl/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'djangocms_owl/owl.theme.css' %}">
+  {% endif %}
 {% endaddtoblock %}
 
 {% block plugin %}{% endblock plugin %}

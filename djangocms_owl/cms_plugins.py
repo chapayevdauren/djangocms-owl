@@ -50,6 +50,8 @@ class OwlCarouselPlugin(CMSPluginBase):
 
         context = super(OwlCarouselPlugin, self).render(context, instance, placeholder)
         context.update({
+            'INCLUDE_CSS': settings.DJANGOCMS_OWL_INCLUDE_CSS,
+            'INCLUDE_JS_OWL': settings.DJANGOCMS_OWL_INCLUDE_JS_OWL,
             'style': instance.get_style(),
         })
 
