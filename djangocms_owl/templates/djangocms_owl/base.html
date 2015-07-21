@@ -1,0 +1,34 @@
+{% load sekizai_tags %}
+{% load static %}
+
+{% addtoblock 'js' %}
+  <script src="{% static 'djangocms_owl/owl.carousel.js' %}"></script>
+{% endaddtoblock %}
+
+{% addtoblock 'js' %}
+  <script>
+    $(document).ready(function() {
+      var owl = $('#plugin-{{ instance.pk }} .slider');
+      owl.owlCarousel({
+        pagination: {{ instance.pagination|yesno:'true,false' }},
+        paginationNumbers: {{ instance.pagination_numbers|yesno:'true,false' }},
+        items: {{ instance.items }},
+        navigation: {{ instance.navigation|yesno:'true,false' }},
+        autoPlay: {{ instance.autoplay|yesno:'true,false' }},
+        stopOnHover: {{ instance.stop_on_hover|yesno:'true,false' }},
+        autoHeight: {{ instance.auto_height|yesno:'true,false' }},
+        itemsDesktop : false,
+        itemsDesktopSmall : false,
+        itemsTablet: false,
+        itemsMobile : false
+      });
+    });
+  </script>
+{% endaddtoblock %}
+
+{% addtoblock 'css' %}
+  <link rel="stylesheet" href="{% static 'djangocms_owl/owl.carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'djangocms_owl/owl.theme.css' %}">
+{% endaddtoblock %}
+
+{% block plugin %}{% endblock plugin %}
