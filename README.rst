@@ -141,8 +141,10 @@ History
 
 - Static files included from bower
 - Included jQuery
+- Included v2 of Owl Carousel of later user
 - Added settings to include/include jquery, owlcarousel.js and owl*.css files
 - Re-added select_template with Django 1.8 support
+- Separated the template to include a base to facilitate custom template creation - e.g. extend base.html
 
 **0.1.4** (2015-07-17)
 
