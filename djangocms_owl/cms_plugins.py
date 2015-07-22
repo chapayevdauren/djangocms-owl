@@ -1,3 +1,5 @@
+import django
+from django.template.loader import select_template
 from django.utils.translation import ugettext as _
 
 from cms.plugin_base import CMSPluginBase
@@ -45,8 +47,14 @@ class OwlCarouselPlugin(CMSPluginBase):
     render_template = TEMPLATE_PATH % 'default'
 
     def render(self, context, instance, placeholder):
-        if instance.template:
-            self.render_template = self.TEMPLATE_PATH % instance.template
+        template = select_template((
+            self.TEMPLATE_PATH % instance.template,
+            self.TEMPLATE_PATH % 'default')
+        )
+        if django.VERSION[1] >= 8:
+            self.render_template = template.template
+        else:
+            self.render_template = template
 
         context = super(OwlCarouselPlugin, self).render(context, instance, placeholder)
         context.update({
