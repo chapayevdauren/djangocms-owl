@@ -16,13 +16,13 @@ Installation
 
 Install Djangocms-owl from Pypi.
 
-::
+.. code:: python
 
     pip install djangocms-owl
 
 Add Djangocms\_owl to INSTALLED\_APPS
 
-::
+.. code:: python
 
     INSTALLED_APPS = (
         ...
@@ -33,7 +33,7 @@ Add Djangocms\_owl to INSTALLED\_APPS
 Django 1.6 and/or South users will need to add the following to ensure
 migration compatibility.
 
-::
+.. code:: python
 
     SOUTH_MIGRATION_MODULES = {
         ...
@@ -94,8 +94,6 @@ Include or exclude static files
 Todo
 ----
 
--  Add settings to disable inclusion of CSS
--  Add settings to disable inclusion of JS
 -  Add support for owl carousel 2
 -  Expand on the included Owl Carousel configuration options
 
@@ -111,9 +109,20 @@ Contributions
 
 History
 -------
-**Django 1.8 render template bug fix. 0.1.4** (2015-07-17)
+**0.1.5** (2015-07-22)
 
-**Bug Fix. 0.1.3** (2015-07-06)
+- Static files included from bower
+- Included jQuery
+- Added settings to include/include jquery, owlcarousel.js and owl*.css files
+- Re-added select_template with Django 1.8 support
+
+**0.1.4** (2015-07-17)
+
+- render template bug fix with Django 1.8 (removed select_template)
+
+**0.1.3** (2015-07-06)
+
+- Critical bug fix
 
 **0.1.2** (2015-07-06)
 
@@ -122,9 +131,14 @@ History
 - Added DJANGOCMS_CHILD_CLASSES configuration option
 - Updated the initial Django migration dependency to CMS 0001 initial
 
-**Documentation updates. 0.1.1** (2015-07-05)
+**0.1.1** (2015-07-05)
 
-**First release on PyPI. 0.1.0** (2015-07-03)
+- Documentation updates
+
+**0.1.0** (2015-07-03)
+
+- First release on PyPI
+
 
 .. _django-cms: https://github.com/divio/django-cms
 .. _Owl Carousel: http://owlgraphic.com/owlcarousel/
