@@ -23,5 +23,7 @@ class OwlConf(AppConf):
 
     INCLUDE_JS_OWL = True
 
+    INCLUDE_JS_JQUERY = True
+
     class Meta:
         prefix = 'djangocms_owl'

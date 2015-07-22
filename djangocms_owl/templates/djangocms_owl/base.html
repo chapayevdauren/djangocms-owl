@@ -2,9 +2,8 @@
 {% load static %}
 
 {% addtoblock 'js' %}
-  {% if INCLUDE_JS_OWL %}
-    <script src="{% static 'djangocms_owl/bower_components/owl-carousel/owl-carousel/owl.carousel.js' %}"></script>
-  {% endif %}
+  {% if INCLUDE_JS_JQUERY %}<script src="{% static 'djangocms_owl/bower_components/jquery/dist/jquery.min.js' %}"></script>{% endif %}
+  {% if INCLUDE_JS_OWL %}<script src="{% static 'djangocms_owl/bower_components/owl-carousel/owl-carousel/owl.carousel.js' %}"></script>{% endif %}
 {% endaddtoblock %}
 
 {% addtoblock 'js' %}

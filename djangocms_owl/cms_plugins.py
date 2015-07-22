@@ -60,6 +60,7 @@ class OwlCarouselPlugin(CMSPluginBase):
         context.update({
             'INCLUDE_CSS': settings.DJANGOCMS_OWL_INCLUDE_CSS,
             'INCLUDE_JS_OWL': settings.DJANGOCMS_OWL_INCLUDE_JS_OWL,
+            'INCLUDE_JS_JQUERY': settings.DJANGOCMS_OWL_INCLUDE_JS_JQUERY,
             'style': instance.get_style(),
         })
 
