@@ -3,7 +3,7 @@
 
 {% addtoblock 'js' %}
   {% if INCLUDE_JS_OWL %}
-    <script src="{% static 'djangocms_owl/owl.carousel.js' %}"></script>
+    <script src="{% static 'djangocms_owl/bower_components/owl-carousel/owl-carousel/owl.carousel.js' %}"></script>
   {% endif %}
 {% endaddtoblock %}
 
@@ -30,8 +30,8 @@
 
 {% addtoblock 'css' %}
   {% if INCLUDE_CSS %}
-    <link rel="stylesheet" href="{% static 'djangocms_owl/owl.carousel.css' %}">
-    <link rel="stylesheet" href="{% static 'djangocms_owl/owl.theme.css' %}">
+    <link rel="stylesheet" href="{% static 'djangocms_owl/bower_components/owl-carousel/owl-carousel/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'djangocms_owl/bower_components/owl-carousel/owl-carousel/owl.theme.css' %}">
   {% endif %}
 {% endaddtoblock %}
 
