@@ -82,6 +82,14 @@ Restrict the plugins available to Owl Carousel
         'PicturePlugin',
     )
 
+Include or exclude static files
+
+.. code:: python
+
+    DJANGOCMS_OWL_INCLUDE_CSS = True
+    DJANGOCMS_OWL_INCLUDE_JS_OWL = True
+    DJANGOCMS_OWL_INCLUDE_JS_JQUERY = True
+
 
 Todo
 ----
