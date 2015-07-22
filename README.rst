@@ -91,11 +91,39 @@ Include or exclude static files
     DJANGOCMS_OWL_INCLUDE_JS_JQUERY = True
 
 
+Templates
+----
+
+base.html includes all the JavaScript and CSS needed to run the carousel, but it does not render the HTML.
+Custom templates can extend base.html as long as they define a plugin block containing the html and plugin render code as show in the below example.
+
+.. code:: html
+
+    {% extends 'djangocms_owl/base.html' %}
+    {% load cms_tags %}
+
+    {% block plugin %}
+      <div class="owl-carousel-plugin plugin{% if style %} {{ style }}{% endif %}" id="plugin-{{ instance.pk }}">
+        <div class="row">
+          <div class="small-12 columns">
+            <div class="slider">
+              {% for plugin in instance.child_plugin_instances %}
+                <div class="item">
+                  {% render_plugin plugin %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endblock plugin %}
+
 Todo
 ----
 
--  Add support for owl carousel 2
--  Expand on the included Owl Carousel configuration options
+- Add support for owl carousel 2
+- Expand on the included Owl Carousel configuration options
+- Create abstract base models that can be overridden
 
 Inspiration
 -----------
