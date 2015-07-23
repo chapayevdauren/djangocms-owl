@@ -92,7 +92,7 @@ Include or exclude static files
 
 
 Templates
-----
+---------
 
 base.html includes all the JavaScript and CSS needed to run the carousel, but it does not render the HTML.
 Custom templates can extend base.html as long as they define a plugin block containing the html and plugin render code as show in the below example.
