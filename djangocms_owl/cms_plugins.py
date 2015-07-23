@@ -1,3 +1,10 @@
+from django.utils.safestring import mark_safe
+
+try:
+    import json
+except ImportError:
+    from django.utils import simplejson as json
+
 import django
 from django.template.loader import select_template
 from django.utils.translation import ugettext as _
@@ -42,6 +49,12 @@ class OwlCarouselPlugin(CMSPluginBase):
                 'template',
             ),
         }),
+        (_('Extra'), {
+            'classes': ('collapse', ),
+            'fields': (
+                'extra_options',
+            ),
+        }),
     )
     TEMPLATE_PATH = 'djangocms_owl/%s.html'
     render_template = TEMPLATE_PATH % 'default'
@@ -51,6 +64,7 @@ class OwlCarouselPlugin(CMSPluginBase):
             self.TEMPLATE_PATH % instance.template,
             self.TEMPLATE_PATH % 'default')
         )
+
         if django.VERSION[1] >= 8:
             self.render_template = template.template
         else:
@@ -62,6 +76,7 @@ class OwlCarouselPlugin(CMSPluginBase):
             'INCLUDE_JS_OWL': settings.DJANGOCMS_OWL_INCLUDE_JS_OWL,
             'INCLUDE_JS_JQUERY': settings.DJANGOCMS_OWL_INCLUDE_JS_JQUERY,
             'style': instance.get_style(),
+            'options': mark_safe(json.dumps(instance.get_owl_options())),
         })
 
         return context

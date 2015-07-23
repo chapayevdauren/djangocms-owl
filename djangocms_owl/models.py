@@ -1,14 +1,27 @@
 # -*- coding: utf-8 -*-
 
+try:
+    import json
+except ImportError:
+    from django.utils import simplejson as json
+
 from django.db import models
 from django.utils.translation import ugettext as _
 
 from cms.models import CMSPlugin
+from jsonfield import JSONField
 
 from .conf import settings
 
 
-class OwlCarousel(CMSPlugin):
+class AbstractOwlBase(CMSPlugin):
+    extra_options = JSONField(_('JSON options'), blank=True, default={})
+
+    class Meta:
+        abstract = True
+
+
+class OwlCarousel(AbstractOwlBase):
     pagination = models.BooleanField(
         default=False,
         help_text=_('Show pagination. (dot dot dot)'), )
@@ -50,3 +63,19 @@ class OwlCarousel(CMSPlugin):
         if self.style and self.style != settings.DJANGOCMS_OWL_DEFAULT:
             return self.style
         return ''
+
+    def get_owl_options(self):
+        options = {
+            'pagination': True if self.pagination else False,
+            'paginationNumbers': True if self.pagination_numbers else False,
+            'items': self.items,
+            'navigation': True if self.navigation else False,
+            'autoPlay': True if self.autoplay else False,
+            'stopOnHover': True if self.stop_on_hover else False,
+            'autoHeight': True if self.auto_height else False,
+        }
+
+        if self.extra_options:
+            options.update(self.extra_options)
+
+        return options

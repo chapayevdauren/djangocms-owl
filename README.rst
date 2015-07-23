@@ -137,6 +137,10 @@ Contributions
 
 History
 -------
+**0.1.6**
+
+- Added a JSON field override to allow for custom options
+
 **0.1.5** (2015-07-22)
 
 - Static files included from bower
