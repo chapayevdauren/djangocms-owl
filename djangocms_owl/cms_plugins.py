@@ -18,6 +18,7 @@ from .models import OwlCarousel
 
 class OwlCarouselPlugin(CMSPluginBase):
     name = _('Owl Carousel')
+    module = settings.DJANGOCMS_OWL_MODULE
     model = OwlCarousel
     allow_children = True
     child_classes = settings.DJANGOCMS_OWL_CHILD_CLASSES

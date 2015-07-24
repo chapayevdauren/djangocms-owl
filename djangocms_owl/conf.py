@@ -7,6 +7,8 @@ from appconf import AppConf
 
 
 class OwlConf(AppConf):
+    MODULE = _('Generic')
+
     DEFAULT = 'default'
 
     CHILD_CLASSES = ()

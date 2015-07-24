@@ -90,6 +90,11 @@ Include or exclude static files
     DJANGOCMS_OWL_INCLUDE_JS_OWL = True
     DJANGOCMS_OWL_INCLUDE_JS_JQUERY = True
 
+Set the CMS module name in the available plugin list. The default is Generic.
+
+.. code:: python
+
+    DJANGOCMS_OWL_MODULE = _('Generic')
 
 Templates
 ---------
@@ -140,6 +145,7 @@ History
 **0.1.6**
 
 - Added a JSON field override to allow for custom options
+- Added support for custom CMS module names
 
 **0.1.5** (2015-07-22)
 
