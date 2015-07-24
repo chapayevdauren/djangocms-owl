@@ -20,7 +20,6 @@ class OwlCarouselPlugin(CMSPluginBase):
     name = _('Owl Carousel')
     model = OwlCarousel
     allow_children = True
-    render_template = 'djangocms_owl/owl_carousel.html'
     child_classes = settings.DJANGOCMS_OWL_CHILD_CLASSES
     fieldsets = (
         (None, {
