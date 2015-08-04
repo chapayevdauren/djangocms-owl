@@ -142,7 +142,7 @@ Contributions
 
 History
 -------
-**0.1.6**
+**0.1.6** (2015-08-05)
 
 - Added a JSON field override to allow for custom options
 - Added support for custom CMS module names
