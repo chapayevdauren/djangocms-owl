@@ -142,6 +142,11 @@ Contributions
 
 History
 -------
+
+**0.1.7** (2015-08-06)
+
+- Migration bugfix
+
 **0.1.6** (2015-08-05)
 
 - Added a JSON field override to allow for custom options
