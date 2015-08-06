@@ -17,7 +17,7 @@ from .conf import settings
 
 
 class AbstractOwlBase(CMSPlugin):
-    extra_options = JSONField(_('JSON options'), blank=True, default={})
+    extra_options = JSONField(_('JSON options'), blank=True)
 
     class Meta:
         abstract = True

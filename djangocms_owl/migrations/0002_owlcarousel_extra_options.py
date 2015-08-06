@@ -15,6 +15,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='owlcarousel',
             name='extra_options',
-            field=jsonfield.fields.JSONField(default={}, verbose_name='JSON options', blank=True),
+            field=jsonfield.fields.JSONField(default=dict, verbose_name='JSON options', blank=True),
+            preserve_default=True,
         ),
     ]
